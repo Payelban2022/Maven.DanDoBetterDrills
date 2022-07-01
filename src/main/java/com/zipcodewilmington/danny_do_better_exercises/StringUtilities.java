@@ -67,7 +67,7 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        int length = inputValue.length();
+
 
         return inputValue.charAt(inputValue.length()/2);
 
@@ -79,7 +79,7 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        return spaceDelimitedString.split("")[0];
     }
 
     /**
@@ -87,7 +87,7 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        return spaceDelimitedString.split("")[1];
     }
 
     /**
@@ -95,6 +95,9 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        StringBuilder ab = new StringBuilder(stringToReverse);
+        ab.reverse();
+
+        return ab.toString();
     }
 }
