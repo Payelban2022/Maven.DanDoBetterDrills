@@ -66,12 +66,14 @@ public class StringUtilities {
      * @param inputValue the value input from user
      * @return the middle character of `inputValue`
      */
-    public static Character getMiddleCharacter(String inputValue){
-
-
-        return inputValue.charAt(inputValue.length()/2);
+    public static Character getMiddleCharacter(String inputValue) {
+        if (inputValue.length() % 2 == 0) {
+            return inputValue.charAt((inputValue.length() / 2) - 1);
+        } else {
+            return inputValue.charAt(inputValue.length() / 2);
 
         }
+    }
 
 
     /**
@@ -79,7 +81,7 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return spaceDelimitedString.split("")[0];
+        return spaceDelimitedString.split(" ")[0];
     }
 
     /**
@@ -87,7 +89,7 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return spaceDelimitedString.split("")[1];
+        return spaceDelimitedString.split(" ")[1];
     }
 
     /**
